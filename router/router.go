@@ -20,6 +20,9 @@ func NewRouter(carRepository *repository.CarRepository) *gin.Engine {
 
 	baseRouter := router.Group("/api")
 	carRouter := baseRouter.Group("/cars")
+	// makeRouter := baseRouter.Group("/makers")
+	
+	// CAR ROUTERS 
 	carRouter.POST("/create", func(context *gin.Context) {
 		var car model.Car
 
